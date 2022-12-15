@@ -69,14 +69,14 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |     | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |       |       |      |      |       | BT_CLR|
-// |     | INS  | PSCR |       |       |      |                |      | Home   |  End |      |       |       |
+// |     |      | PSCR |       |       |      |                |      | Home   |  End |      |       |       |
 // |     |      |      |       |       |      |                |  <-   |  v    |   v  |  ->  | BKSPC |  DEL  |
 //       |      |      |       |       |      |      |  |      |K_CMENU|PG_DOWN| PGUP |      |       |
 //       |      |      |       |       |      |      |  |      |       |      |       |      |       |
             bindings = <
 &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans       &trans      &trans    &trans    &trans   &bt BT_CLR
 &trans     &trans       &kp PSCRN    &trans       &trans       &trans                   &trans       &kp HOME    &kp END   &trans    &trans   &trans
-&trans     &trans       &trans       &trans       &trans       &trans                   &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT &kp BSPC &kp DEL
+&trans     &trans       &trans       &trans       &trans       &zed_em_kay              &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT &kp BSPC &kp DEL
 &trans     &trans       &trans       &trans       &trans       &trans  &trans   &trans  &kp K_CMENU  &kp PG_DN   &kp PG_UP &trans    &trans   &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans       &trans      &trans    &trans
             >;

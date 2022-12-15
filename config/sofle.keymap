@@ -15,25 +15,27 @@
             label = "IDEA_debug";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_press &kp LALT>
                 , <&macro_tap &kp F9>
                 , <&macro_release &kp LSHFT>
                 , <&macro_release &kp LALT>
+                , <&macro_pause_for_release>
                 ;
         };
         go_to_backlog: go_to_backlog {
                     label = "go_to_backlog";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
-                    wait-ms = <10>;
-                    tap-ms = <10>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
                     bindings
                         =
-                          <&kp P &kp F &kp D &kp T &kp L &kp B &kp SPACE &kp P &kp F &kp L &kp F &kp X &kp E &kp SPACE &kp D &kp SPACE  &kp C &kp K &kp T &kp L &kp E &kp DOT &kp O &kp B &kp Q &kp SPACE  &kp C &kp G &kp H &kp B &kp Y &kp N &kp SPACE &kp G &kp J &kp COLON &kp F &kp K &kp C &kp N &kp F &kp SPACE>
+                            <&macro_tap &kp P &kp F &kp  D &kp T &kp L &kp B &kp SPACE &kp P &kp F &kp L &kp F &kp X &kp E &kp SPACE &kp D &kp SPACE  &kp C &kp K &kp T &kp L &kp E &kp DOT &kp O &kp B &kp Q &kp SPACE  &kp C &kp G &kp H &kp B &kp Y &kp N &kp SPACE &kp G &kp J &kp COLON &kp F &kp K &kp C &kp N &kp F &kp SPACE>
+                          , <&macro_pause_for_release>
                         ;
         };
 
@@ -41,12 +43,13 @@
                     label = "ctrl_z";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
-                    wait-ms = <10>;
-                    tap-ms = <10>;
+                    wait-ms = <40>
+                    tap-ms = <40>
                     bindings
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp Z>
                         , <&macro_release &kp LCTRL>
+                        , <&macro_pause_for_release>
                         ;
         };
 
@@ -55,12 +58,13 @@
                     label = "ctrl_x";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
-                    wait-ms = <10>;
-                    tap-ms = <10>;
+                    wait-ms = <40>
+                    tap-ms = <40>
                     bindings
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp X>
                         , <&macro_release &kp LCTRL>
+                        , <&macro_pause_for_release>
                         ;
         };
 
@@ -69,12 +73,13 @@
                     label = "ctrl_c";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
-                    wait-ms = <10>;
-                    tap-ms = <10>;
+                    wait-ms = <40>
+                    tap-ms = <40>
                     bindings
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp C>
                         , <&macro_release &kp LCTRL>
+                        , <&macro_pause_for_release>
                         ;
         };
 
@@ -83,12 +88,13 @@
                     label = "ctrl_v";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
-                    wait-ms = <10>;
-                    tap-ms = <10>;
+                    wait-ms = <40>
+                    tap-ms = <40>
                     bindings
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp V>
                         , <&macro_release &kp LCTRL>
+                        , <&macro_pause_for_release>
                         ;
         };
 
@@ -141,8 +147,8 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |     | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |       |       |      |      |       | BT_CLR|
-// |     |      |      |       |       |      |                | PSCR  | Home  |  End |      |       |       |
-// |     |      |      |       |       |      |                |  <-   |  v    |   v  |  ->  | BKSPC |  DEL  |
+// |     |      |      |       |       |  m_  |                | PSCR  | Home  |  End |      |       |       |
+// |     |      |      |       |       |  m_  |                |  <-   |  v    |   v  |  ->  | BKSPC |  DEL  |
 //       |ctrl_z|ctrl_x| ctrl_c| ctrl_v|      |      |  |      |K_CMENU|PG_DOWN| PGUP |      |       |
 //       |      |      |       |       |      |      |  |      |       |      |       |      |       |
             bindings = <
@@ -153,7 +159,7 @@
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans       &trans      &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };

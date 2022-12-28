@@ -26,6 +26,37 @@
                 ;
         };
 
+        idea_run: idea_run {
+                    label = "IDEA_run";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LSHFT>
+                        , <&macro_press &kp LALT>
+                        , <&macro_tap &kp F10>
+                        , <&macro_release &kp LSHFT>
+                        , <&macro_release &kp LALT>
+                        ;
+        };
+
+        idea_run_fragment: idea_run_fragment {
+                            label = "IDEA_run_fragment";
+                            compatible = "zmk,behavior-macro";
+                            #binding-cells = <0>;
+                            wait-ms = <40>;
+                            tap-ms = <40>;
+                            bindings
+                                = <&macro_press &kp LALT>
+                                , <&macro_tap &kp F8>
+                                , <&macro_release &kp LALT>
+                                ;
+        };
+
+
+
+
         ctrl_z: ctrl_z {
                     label = "ctrl_z";
                     compatible = "zmk,behavior-macro";
@@ -128,25 +159,25 @@
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |     | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |       |       |      |      |       | BT_CLR|
-// |     |      |      |       |       |  m_  |                | PSCR  | Home  |  End |      |       |       |
-// |     |      |      |       |       |  m_  |                |  <-   |  v    |   v  |  ->  | BKSPC |  DEL  |
-//       |ctrl_z|ctrl_x| ctrl_c| ctrl_v|      |      |  |      |K_CMENU|PG_DOWN| PGUP |      |       |
-//       |      |      |       |       |      |      |  |      |       |      |       |      |       |
+// |     | BT1  | BT2  |  BT3  |  BT4  |  BT5  |                |       |       |      |      |       | BT_CLR|
+// |     |      |      |       |       |i_run  |                | PSCR  | Home  |  End |      |       |       |
+// |     |      |      |       |       |i_debug|                |  <-   |  v    |   v  |  ->  | BKSPC |  DEL  |
+//       |ctrl_z|ctrl_x| ctrl_c| ctrl_v|       |      |  |      |K_CMENU|PG_DOWN| PGUP |      |       |
+//       |      |      |       |       |       |      |  |      |       |      |       |      |       |
             bindings = <
-&trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans       &trans      &trans    &trans    &trans   &bt BT_CLR
-&trans     &trans       &trans       &trans       &trans       &trans                   &kp PSCRN    &kp HOME    &kp END   &trans    &trans   &trans
-&trans     &trans       &trans       &trans       &trans       &idea_debug              &kp LEFT     &kp DOWN    &kp UP    &kp RIGHT &kp BSPC &kp DEL
-&trans     &ctrl_z      &ctrl_x      &ctrl_c      &ctrl_v      &trans  &trans   &trans  &kp K_CMENU  &kp PG_DN   &kp PG_UP &trans    &trans   &trans
-                        &trans       &trans       &trans       &trans  &trans   &trans  &trans       &trans      &trans    &trans
+&trans     &trans       &trans       &trans       &trans       &trans                   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
+&trans     &trans       &trans       &trans       &trans       &idea_run                   &kp PSCRN    &kp HOME     &kp END      &trans       &trans         &trans
+&trans     &trans       &trans       &trans       &trans       &idea_debug              &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
+&trans     &ctrl_z      &ctrl_x      &ctrl_c      &ctrl_v      &trans  &trans   &trans  &kp K_CMENU  &kp PG_DN    &kp PG_UP    &trans       &trans         &trans
+                        &trans       &trans       &trans       &trans  &trans   &trans  &trans       &trans       &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };

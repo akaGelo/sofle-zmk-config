@@ -153,7 +153,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &lt 1 RET &mt LGUI CLCK  &kp LGUI     &lt 2 SPACE  &kp RCTRL &kp RALT  &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {

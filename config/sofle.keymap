@@ -174,7 +174,7 @@
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                                 &kp Y        &kp U     &kp I     &kp O    &kp P    &kp LBKT
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                                 &kp H        &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B     &to 1          &to 2        &kp N        &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT BSPC
-                 &kp LGUI &kp LALT &kp LCTRL &lt 1 RET &mt LGUI CLCK  &kp LGUI     &lt 2 SPACE  &kp RCTRL &kp RALT  &kp DEL
+                 &to 2    &kp LALT &kp LCTRL &lt 1 RET &mt LGUI CLCK  &kp LGUI     &lt 2 SPACE  &kp RCTRL &kp RALT  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;
@@ -201,14 +201,14 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |     |       |       | run_frm|        |        |                | BT1   | BT2   |  BT3  |  BT4  |  BT5  | BT_CLR|
-// |     |  stop |fnd_usg|set_brpn| F12   |i_run    |                | PSCR  | End   | Home |      |       |       |
+// |     |       |       |set_brpn |        |        |                | BT1   | BT2   |  BT3  |  BT4  |  BT5  | BT_CLR|
+// |     |  stop |fnd_usg| run_frm | F12    |i_run   |                | PSCR  | End   | Home |      |       |       |
 // |     |  F2   | F7    |  F8    | F9     |i_debug  |                |  <-   |  v    |   ^  |  ->  | BKSPC |  DEL  |
 //       |ctrl_z |ctrl_x | ctrl_c | ctrl_v |         |      |  |      |K_CMENU|PG_DOWN| PGUP |      |       |
 //       |       |       |        |        |         |      |  |      |       |      |       |      |       |
             bindings = <
-&trans     &trans       &trans             &idea_run_fragment     &trans       &trans                         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
-&trans     &idea_stop   &idea_find_usage   &idea_set_breakpoint   &kp F12      &idea_run                      &kp PSCRN    &kp END      &kp HOME     &trans       &trans         &trans
+&trans     &trans       &trans             &idea_set_breakpoint   &trans       &trans                         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
+&trans     &idea_stop   &idea_find_usage   &idea_run_fragment     &kp F12      &idea_run                      &kp PSCRN    &kp END      &kp HOME     &trans       &trans         &trans
 &trans     &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
 &trans     &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &trans        &trans   &trans  &kp K_CMENU  &kp PG_DN    &kp PG_UP    &trans       &trans         &trans
                         &trans             &trans                 &trans       &trans        &trans   &trans  &trans       &trans       &trans       &trans

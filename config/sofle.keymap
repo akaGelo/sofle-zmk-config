@@ -1,4 +1,5 @@
-/*
+
+ /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -193,17 +194,17 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  `    |  1  |  2  |  3   |  4   |  5   |                           |  6   |  7    |  8    |  9   |   0   | INS        |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                           |  Y   |  U    |  I    |  O   |   P   |  [         |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '        |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  RET          |  |        |  N   |  M    |  ,    |  .   |   /   | LSHFT|BSPC |
-//               |tog 1| ALT  | CTRL   | ENTER|  CLCK&LGUI   |  | LGUI   | SPACE| CTRL  | ALT   | tog 2|
+// |  `       |  1  |  2  |  3   |  4   |  5   |                           |  6   |  7    |  8    |  9   |   0   | INS        |
+// |  ESC     |  Q  |  W  |  E   |  R   |  T   |                           |  Y   |  U    |  I    |  O   |   P   |  [         |
+// |  TAB     |  A  |  S  |  D   |  F   |  G   |                           |  H   |  J    |  K    |  L   |   ;   |   '        |
+// | SHFT|CPL |  Z  |  X  |  C   |  V   |  B   |          |  |        |  N   |  M    |  ,    |  .   |   /   | LSHFT      |
+//               |LGUI    | ALT  | CTRL   | 2  |  RET   |  | SPACE   | SPACE| CTRL  | ALT   | LGUI |
             bindings = <
-&kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                                &kp N6       &kp N7    &kp N8    &kp N9   &kp N0   &kp INS
-&kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                                 &kp Y        &kp U     &kp I     &kp O    &kp P    &kp LBKT
-&kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                                 &kp H        &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B     &to 1          &to 2        &kp N        &kp M     &kp COMMA &kp DOT  &kp FSLH &mt RSHFT BSPC
-                 &tog 1   &kp LALT &kp LCTRL &lt 1 RET &mt LGUI CLCK  &kp LGUI     &lt 2 SPACE  &kp RCTRL &kp RALT  &tog 2
+&kp GRAVE      &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                                &kp N6       &kp N7    &kp N8    &kp N9   &kp N0   &kp INS
+&kp ESC        &kp Q  &kp W    &kp E    &kp R     &kp T                                 &kp Y        &kp U     &kp I     &kp O    &kp P    &kp LBKT
+&kp TAB        &kp A  &kp S    &kp D    &kp F     &kp G                                 &kp H        &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&mt LSHFT CLCK &kp Z  &kp X    &kp C    &kp V     &kp B     &to 1          &to 2        &kp N        &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                      &kp LGUI &kp LALT &kp LCTRL &mo 1 &kp RET            &kp SPACE    &mo 2        &kp RCTRL &kp RALT  &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;

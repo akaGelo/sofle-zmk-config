@@ -250,11 +250,11 @@
 //  clck |ctrl_z |ctrl_x | ctrl_c | ctrl_v   |        |     |  |       |K_CMENU|PG_DOWN| PGUP |      |C_BKSPC| C_DEL
 //       |       |       |        |          |        |     |  |       |       |      |       |      |       |
             bindings = <
-&trans     &idea_stop   &none              &idea_set_breakpoint   &trans       &trans                         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
-&trans     &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp PSCRN    &kp END      &kp HOME     &trans       &trans         &trans
-&trans     &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
-&trans     &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &trans        &trans   &trans  &kp K_CMENU  &kp PG_DN    &kp PG_UP    &trans       &ctrl_bspc     &ctrl_del
-                        &trans             &trans                 &trans       &kp CLCK      &trans   &trans  &trans       &trans       &trans       &trans
+&none      &idea_stop   &none              &idea_set_breakpoint   &none        &none                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
+&none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp PSCRN    &kp END      &kp HOME     &none        &none          &none 
+&none      &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
+&none      &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &none         &none    &none   &kp K_CMENU  &kp PG_DN    &kp PG_UP    &none        &ctrl_bspc     &ctrl_del
+                        &trans             &trans                 &trans       &trans        &kp CLCK &trans  &trans       &trans       &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;

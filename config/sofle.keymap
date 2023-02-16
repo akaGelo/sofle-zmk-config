@@ -118,7 +118,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp Z>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 
@@ -133,7 +132,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp X>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 
@@ -148,7 +146,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp C>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 
@@ -163,7 +160,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp V>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 
@@ -177,7 +173,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp  BSPC>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 
@@ -191,7 +186,6 @@
                         = <&macro_press &kp LCTRL>
                         , <&macro_tap &kp  DEL>
                         , <&macro_release &kp LCTRL>
-                        , <&macro_release &kp SPACE>
                         ;
         };
 

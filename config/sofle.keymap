@@ -248,7 +248,7 @@
 &none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp K_CMENU  &kp END      &kp HOME     &none        &kp PSCRN      &none
 &none      &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
 &trans     &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &none         &none    &none   &kp CLCK     &kp PG_DN    &kp PG_UP    &none        &ctrl_bspc     &trans
-                        &trans             &trans                 &trans       &trans        &trans   &trans  &trans       &trans       &trans       &trans
+                        &trans             &trans                 &trans       &trans        &none    &none   &trans       &trans       &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;

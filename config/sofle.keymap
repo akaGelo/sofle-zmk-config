@@ -239,7 +239,7 @@
                     &trans    &trans      &trans    &trans    &none    &none  &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -251,7 +251,7 @@
 //       |       |       |        |          |        |     |  |       |       |      |       |      |       |
             bindings = <
 &none      &idea_stop   &none              &idea_set_breakpoint   &none        &none                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
-&none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp K_CMENU  &kp END      &kp HOME     &none        &kp PSCR       &none
+&none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp K_CMENU  &kp END      &kp HOME     &none        &kp PSCRN      &none
 &none      &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
 &trans     &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &none         &none    &none   &kp CLCK     &kp PG_DN    &kp PG_UP    &none        &ctrl_bspc     &trans
                         &trans             &trans                 &trans       &trans        &trans   &trans  &trans       &trans       &trans       &trans

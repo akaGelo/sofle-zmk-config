@@ -384,7 +384,7 @@
             sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
+        raise_layer {// layer for intellij idea
 // ------------------------------------------------------------------------------------------------------------
 // |     |  stop  |       |set_brpn |        |        |                | BT1   | BT2   |  BT3  |  BT4  |  BT5  | BT_CLR|
 // |     |        |fnd_usg| run_frm | term   |i_run   |                | K_CMENU| End   | Home |      | PSCR  |       |
@@ -403,12 +403,12 @@
         };
 
 
-     tri_layer {
+     tri_layer {// layer for i3wm
 // ------------------------------------------------------------------------------------------------------------
 // |     |       |       |        |        |        |                |       |       |         |      |      |       |
 // |     |       |       |        |        |        |                |       |       |         |      |      |       |
-// |     |       |       |        |        |        |                |       |       |         |      |      |       |
-//       |       |       |        |        |        |     |  |       |       |       |         |      |      |       |
+// |     | win1  | win2  |  win3  | win4   |  win5  |                |       |       |         |      |      |       |
+//       | win6  |  win7 |  win8  | win9   |  win0  |     |  |       |       |       |         |      |      |       |
 //       |       |       |        |        |        |     |  |       |       |       |         |      |      |
             bindings = <
 &none      &none        &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &none

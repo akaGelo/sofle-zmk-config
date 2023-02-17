@@ -11,6 +11,16 @@
 
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then_layer = <3>;
+        };
+    };
+};
+
+/ {
     macros {
         idea_debug: idea_debug {
                 label = "IDEA_debug";
@@ -195,6 +205,7 @@
 };
 
 
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -270,7 +281,7 @@
                         &trans             &trans                 &trans       &trans        &none    &none      &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_none LEFT &inc_dec_none PG_DN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
     };

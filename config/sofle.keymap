@@ -214,7 +214,7 @@
         };
 
         win_2: win_2 {
-                    label = "win_1";
+                    label = "win_2";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -227,7 +227,7 @@
         };
 
         win_3: win_3 {
-                    label = "win_1";
+                    label = "win_3";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -240,7 +240,7 @@
         };
 
         win_4: win_4 {
-                    label = "win_1";
+                    label = "win_4";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -253,7 +253,7 @@
         };
 
         win_5: win_5 {
-                    label = "win_1";
+                    label = "win_5";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -266,7 +266,7 @@
         };
 
         win_6: win_6 {
-                    label = "win_1";
+                    label = "win_6";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -280,7 +280,7 @@
 
 
         win_7: win_7 {
-                    label = "win_1";
+                    label = "win_7";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -294,7 +294,7 @@
 
 
         win_8: win_8 {
-                    label = "win_1";
+                    label = "win_8";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -307,7 +307,7 @@
         };
 
         win_9: win_9 {
-                    label = "win_1";
+                    label = "win_9";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;
@@ -320,7 +320,7 @@
         };
 
         win_0: win_0 {
-                    label = "win_1";
+                    label = "win_0";
                     compatible = "zmk,behavior-macro";
                     #binding-cells = <0>;
                     wait-ms = <40>;

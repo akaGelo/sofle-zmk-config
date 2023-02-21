@@ -332,10 +332,86 @@
                         ;
         };
 
+        win_q: win_q {
+                    label = "win_q";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp Q>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
+
+        win_m: win_m {
+                    label = "win_m";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp M>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
+
+        win_h: win_h {
+                    label = "win_h";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp H>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
+
+        win_j: win_j {
+                    label = "win_j";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp J>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
 
 
 
+        win_k: win_k {
+                    label = "win_k";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp K>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
 
+
+        win_l: win_l {
+                    label = "win_l";
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    wait-ms = <40>;
+                    tap-ms = <40>;
+                    bindings
+                        = <&macro_press &kp LGUI>
+                        , <&macro_tap &kp L>
+                        , <&macro_release &kp LGUI>
+                        ;
+        };
 
 
     };
@@ -405,16 +481,16 @@
 
      tri_layer {// layer for i3wm
 // ------------------------------------------------------------------------------------------------------------
-// |     |       |       |        |        |        |                |       |       |         |      |      |       |
-// |     |       |       |        |        |        |                |       |       |         |      |      |       |
-// |     | win1  | win2  |  win3  | win4   |  win5  |                |       |       |         |      |      |       |
-//       | win6  |  win7 |  win8  | win9   |  win0  |     |  |       |       |       |         |      |      |       |
-//       |       |       |        |        |        |     |  |       |       |       |         |      |      |
+// |     |       |       |        |        |        |                |       |       |         |        |      |       |
+// |     | win_q |       |        |        |        |                |       |       |         |        |      |       |
+// |     | win1  | win2  |  win3  | win4   |  win5  |                | win_h | win_j |  win_k  | win_l  |      |       |
+//       | win6  |  win7 |  win8  | win9   |  win0  |     |  |       |       |       |         |        |      |       |
+//       |       |       |        |        |        |     |  |       |       | win_m |         |        |      |
             bindings = <
 &none      &none        &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &none
 &none      &kp Q        &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &none
-&none      &win_1       &win_2             &win_3                 &win_4       &win_5                            &none     &none    &none     &none     &none     &none
-&trans     &win_6       &win_7             &win_8                 &win_9       &win_0        &none    &none      &none     &none    &none     &none     &none     &trans
+&none      &win_1       &win_2             &win_3                 &win_4       &win_5                            &win_h    &win_j   &win_k    &win_l    &none     &none
+&trans     &win_6       &win_7             &win_8                 &win_9       &win_0        &none    &none      &none     &win_m   &none     &none     &none     &trans
                         &trans             &trans                 &trans       &trans        &none    &none      &trans    &trans   &trans    &trans
             >;
 

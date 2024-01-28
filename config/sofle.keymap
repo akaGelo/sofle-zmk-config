@@ -484,13 +484,13 @@
 
      tri_layer {// layer for i3wm
 // ------------------------------------------------------------------------------------------------------------
-// |     |       |       |        |        |        |                |       |       |         |        |      |       |
+// |     |       |       |        |        |        |                |       |       |         |        |      |BT_CLR_ALL|
 // |     | win_q |       |        |        |        |                |       |       |         |        |      |       |
 // |     | win1  | win2  |  win3  | win4   |  win5  |                | win_h | win_j |  win_k  | win_l  |      |       |
 //       | win6  |  win7 |  win8  | win9   |  win0  |     |  |       |       |       |         |        |      |       |
 //       |       |       |        |        |        |     |  |       |       | win_m |         |        |      |
             bindings = <
-&none      &none        &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &none
+&none      &none        &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &bt BT_CLR_ALL
 &none      &win_q       &none              &none                  &none        &none                             &none     &none    &none     &none     &none     &none
 &none      &win_1       &win_2             &win_3                 &win_4       &win_5                            &win_h    &win_j   &win_k    &win_l    &none     &none
 &trans     &win_6       &win_7             &win_8                 &win_9       &win_0        &none    &none      &none     &win_m   &none     &none     &none     &trans

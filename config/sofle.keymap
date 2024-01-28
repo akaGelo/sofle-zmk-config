@@ -441,7 +441,7 @@
                       &kp LGUI &kp LALT &kp LCTRL &mo 1 &kp RET            &kp SPACE    &mo 2        &kp RCTRL &kp RALT  &kp LGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
         };
 
         lower_layer {
@@ -460,19 +460,19 @@
                     &trans    &trans      &trans    &trans    &none    &none  &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {// layer for intellij idea
 // ------------------------------------------------------------------------------------------------------------
 // |     |  stop  |       |set_brpn |        |        |                | BT1   | BT2   |  BT3  | BT4 |OUT_TOG| BT_CLR|
-// |     |        |fnd_usg| run_frm | term   |i_run   |                | K_CMENU| End   | Home |     | PSCR  |       |
+// |     |        |fnd_usg| run_frm | term   |i_run   |                | K_CMENU| End   | Home |     | PSCR  |OUT_TOG|
 // |CLCK |  F2   | F7    |  F8    | F9       |i_debug |                |  <-   |  v    |   ^  |  ->  | BKSPC |  DEL  |
 //       |ctrl_z |ctrl_x | ctrl_c | ctrl_v   |        |     |  |       | SPSL  |PG_DOWN| PGUP |      |C_BKSPC|       |
 //       |       |       |        |          |        |     |  |       |       |      |       |      |       |
             bindings = <
-&none      &idea_stop   &none              &idea_set_breakpoint   &none        &none                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG   &bt BT_CLR
-&none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp K_CMENU  &kp END      &kp HOME     &none        &kp PSCRN      &none
+&none      &idea_stop   &none              &idea_set_breakpoint   &none        &none                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR
+&none      &none        &idea_find_usage   &idea_run_fragment     &idea_term   &idea_run                      &kp K_CMENU  &kp END      &kp HOME     &none        &kp PSCRN      &out OUT_TOG
 &kp CLCK   &kp F2       &kp F7             &kp F8                 &kp F9       &idea_debug                    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC       &kp DEL
 &trans     &ctrl_z      &ctrl_x            &ctrl_c                &ctrl_v      &none         &none    &none   &kp CLCK     &kp PG_DN    &kp PG_UP    &none        &ctrl_bspc     &trans
                         &trans             &trans                 &trans       &trans        &none    &none   &trans       &trans       &trans       &trans
